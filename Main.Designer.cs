@@ -31,14 +31,14 @@
             this.btnHire = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnFire = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbFilter = new System.Windows.Forms.ComboBox();
             this.dgvList = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHire
             // 
-            this.btnHire.BackColor = System.Drawing.Color.LightGreen;
+            this.btnHire.BackColor = System.Drawing.Color.Lime;
             this.btnHire.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnHire.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnHire.Location = new System.Drawing.Point(212, 12);
@@ -71,13 +71,13 @@
             this.btnFire.Text = "Zwolnij";
             this.btnFire.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
+            // cmbFilter
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(667, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 3;
+            this.cmbFilter.FormattingEnabled = true;
+            this.cmbFilter.Location = new System.Drawing.Point(667, 12);
+            this.cmbFilter.Name = "cmbFilter";
+            this.cmbFilter.Size = new System.Drawing.Size(121, 21);
+            this.cmbFilter.TabIndex = 3;
             // 
             // dgvList
             // 
@@ -94,7 +94,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 460);
             this.Controls.Add(this.dgvList);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbFilter);
             this.Controls.Add(this.btnFire);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnHire);
@@ -110,7 +110,7 @@
         private System.Windows.Forms.Button btnHire;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnFire;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbFilter;
         private System.Windows.Forms.DataGridView dgvList;
     }
 }
