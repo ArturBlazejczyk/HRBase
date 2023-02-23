@@ -56,6 +56,7 @@
       <DependentUpon>AddEditEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee.cs" />
+    <Compile Include="FileHelper.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>

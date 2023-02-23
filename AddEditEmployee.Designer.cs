@@ -43,7 +43,7 @@
             this.lbWages = new System.Windows.Forms.Label();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.rtbRemarks = new System.Windows.Forms.RichTextBox();
+            this.rtbComments = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // lbFirstName
@@ -175,6 +175,7 @@
             this.btnConfirm.TabIndex = 14;
             this.btnConfirm.Text = "Zatwierdź";
             this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // btnCancel
             // 
@@ -188,20 +189,20 @@
             this.btnCancel.Text = "Anuluj";
             this.btnCancel.UseVisualStyleBackColor = false;
             // 
-            // rtbRemarks
+            // rtbComments
             // 
-            this.rtbRemarks.Location = new System.Drawing.Point(162, 219);
-            this.rtbRemarks.Name = "rtbRemarks";
-            this.rtbRemarks.Size = new System.Drawing.Size(256, 169);
-            this.rtbRemarks.TabIndex = 16;
-            this.rtbRemarks.Text = "";
+            this.rtbComments.Location = new System.Drawing.Point(162, 219);
+            this.rtbComments.Name = "rtbComments";
+            this.rtbComments.Size = new System.Drawing.Size(256, 169);
+            this.rtbComments.TabIndex = 16;
+            this.rtbComments.Text = "";
             // 
             // AddEditEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(432, 473);
-            this.Controls.Add(this.rtbRemarks);
+            this.Controls.Add(this.rtbComments);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.tbWages);
@@ -243,6 +244,6 @@
         private System.Windows.Forms.Label lbWages;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.RichTextBox rtbRemarks;
+        private System.Windows.Forms.RichTextBox rtbComments;
     }
 }

@@ -22,13 +22,7 @@ namespace HRBase
         {
             InitializeComponent();
 
-            var employees = new List<Employee>();
-            employees.Add(new Employee { FirstName = "Jan" });
-            employees.Add(new Employee { FirstName = "Zigniew" });
-            employees.Add(new Employee { FirstName = "Jędrzej" });
-
-            //SerializeToFile(employees);
-            FileHelper.SerializeToFileJson(employees);
+            var employees = FileHelper.DeserializeFromFileJson();
 
             dgvList.DataSource = employees;
         }

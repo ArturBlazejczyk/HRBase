@@ -12,9 +12,9 @@ namespace HRBase
         public int EmployeeId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public DateTime HireDate { get; set; }
+        public string HireDate { get; set; }
         public DateTime FireDate { get; set; }
         public decimal Wage { get; set; }
-        public string Remarks { get; set; }
+        public string Comments { get; set; }
     }
 }
