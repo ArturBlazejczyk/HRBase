@@ -20,10 +20,17 @@ namespace HRBase
 
         private void btnHire_Click(object sender, EventArgs e)
         {
+            var addEditEmployee = new AddEditEmployee();
+            addEditEmployee.ShowDialog();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+        }
+
+        private void btnFire_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
