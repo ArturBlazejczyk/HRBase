@@ -15,6 +15,7 @@ namespace HRBase
             {
                 new Group() { Id = 0, Name = defualtName},
                 new Group() { Id = 1, Name = "Zatrudniony"},
+                new Group() { Id = 1, Name = "Zwolniony"},
             };
         }
 
