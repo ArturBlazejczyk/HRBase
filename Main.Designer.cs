@@ -72,6 +72,7 @@
             this.btnFire.TabIndex = 2;
             this.btnFire.Text = "Zwolnij";
             this.btnFire.UseVisualStyleBackColor = false;
+            this.btnFire.Click += new System.EventHandler(this.btnFire_Click);
             // 
             // cmbFilter
             // 
