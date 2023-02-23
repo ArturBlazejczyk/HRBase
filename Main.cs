@@ -8,15 +8,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
+using Newtonsoft;
+using Newtonsoft.Json;
 
 namespace HRBase
 {
     public partial class Main : Form
     {
+
+
         public Main()
         {
             InitializeComponent();
+
+            var employees = new List<Employee>();
+            employees.Add(new Employee { FirstName = "Jan" });
+            employees.Add(new Employee { FirstName = "Zigniew" });
+            employees.Add(new Employee { FirstName = "Jędrzej" });
+
+            //SerializeToFile(employees);
+            FileHelper.SerializeToFileJson(employees);
+
+            dgvList.DataSource = employees;
         }
+
+
 
         private void btnHire_Click(object sender, EventArgs e)
         {
