@@ -15,6 +15,8 @@ namespace HRBase
         public AddEditEmployee()
         {
             InitializeComponent();
+
+
         }
     }
 }

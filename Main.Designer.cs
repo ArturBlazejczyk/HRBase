@@ -47,6 +47,7 @@
             this.btnHire.TabIndex = 0;
             this.btnHire.Text = "Zatrudnij";
             this.btnHire.UseVisualStyleBackColor = false;
+            this.btnHire.Click += new System.EventHandler(this.btnHire_Click);
             // 
             // btnEdit
             // 
@@ -58,6 +59,7 @@
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Edytuj";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnFire
             // 
