@@ -16,36 +16,39 @@ namespace HRBase
         {
             InitializeComponent();
 
-            FileHelper.DeserializeFromFileJson();
+            FileHelper.DeserializeFromFile();
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            var employees = FileHelper.DeserializeFromFileJson();
+            var employees = FileHelper.DeserializeFromFile();
 
             var employeeWithHighestId = employees
                 .OrderByDescending(x => x.EmployeeId).FirstOrDefault();
 
-            var employeeId = employeeWithHighestId == null ? 
+            var employeeId = employeeWithHighestId == null ?
                 1 : employeeWithHighestId.EmployeeId + 1;
 
             employees.Add(AddTextFromControls(employeeId));
-            FileHelper.SerializeToFileJson(employees);
+            FileHelper.SerializeToFile(employees);
 
             Close();
         }
 
         private Employee AddTextFromControls(int employeeId)
         {
+            DateTime fireDate = DateTime.Now;
+
             var employee = new Employee
             {
                 EmployeeId = employeeId,
                 FirstName = tbFirstName.Text,
                 LastName = tbLastName.Text,
                 HireDate = tbHireDate.Text,
-                FireDate = Convert.ToDateTime(tbFireDate.Text),
+                FireDate = tbFireDate.Text == null ?
+                    fireDate : DateTime.Parse(tbFireDate.Text),
                 Wage = Convert.ToDecimal(tbWages.Text),
-                Comments = rtbComments.Text,
+                Comments = rtbComments.Text
             };
             return employee;
         }

@@ -16,18 +16,13 @@ namespace HRBase
 {
     public partial class Main : Form
     {
-
-
         public Main()
         {
             InitializeComponent();
 
             var employees = FileHelper.DeserializeFromFileJson();
-
             dgvList.DataSource = employees;
         }
-
-
 
         private void btnHire_Click(object sender, EventArgs e)
         {

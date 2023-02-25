@@ -15,7 +15,7 @@ namespace HRBase
         private static string _filePath =
     Path.Combine(Environment.CurrentDirectory, "EmployeesDataBase.txt");
 
-        public static void SerializeToFile(List<Employee> employees, string _filePath)
+        public static void SerializeToFile(List<Employee> employees)
         {
             var serializer = new XmlSerializer(typeof(List<Employee>));
 
@@ -43,28 +43,15 @@ namespace HRBase
 
         public static void SerializeToFileJson(List<Employee> employees)
         {
-            var serializerJson = new JsonSerializer();
-
-            using (var streamWriter = new StreamWriter(_filePath))
-            {
-                serializerJson.Serialize(streamWriter, employees);
-                streamWriter.Close();
-            }
+            var json = JsonConvert.SerializeObject(employees);
+            File.WriteAllText(_filePath, json);
         }
 
         public static List<Employee> DeserializeFromFileJson()
         {
-            if (!File.Exists(_filePath))
-                return new List<Employee>();
-
-            var serializerJson = new JsonSerializer();
-
-            using (var streamReader = new StreamReader(_filePath))
-            {
-                var employees = (List<Employee>)serializerJson.Deserialize(streamReader, typeof(Employee));
-                streamReader.Close();
-                return employees;
-            }
+            var json = File.ReadAllText(_filePath);
+            return JsonConvert.DeserializeObject<List<Employee>>(json);
         }
     }
 }
+
